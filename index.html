@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title> Conditional Statements</title>
+</head>
+
+<body>
+    <h1> Click on the button to get time based greeting</h1>
+    <button onclick="myfunction">Try it</button>
+    <p id="hour"></p>
+    <p id="greet"></p>
+    <script>
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Good Morning";
+        }
+        else if (time < 20) {
+            greeting = "Good Day";
+        }
+        else {
+            greeting = "Good Evening";
+        }
+        document.getElementById("hour").innerHTML = "current hour is" + time;
+        document.getElementById("greet").innerHTML = greeting;
+    </script>
+</body>
+
+</html>
